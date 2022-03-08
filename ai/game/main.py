@@ -7,7 +7,7 @@ rootdir = os.path.dirname(os.path.abspath(__file__))
 
 class Game_Window(arcade.Window):
     def __init__(self):
-        super().__init__(600 , 400 , "Autonomous Moving Asteroid")
+        super().__init__(1280 , 720 , "Autonomous Moving Asteroid")
 
         Player.texture = arcade.load_texture(rootdir + "/player.png")
         Player.texture.image = Player.texture.image.rotate(-90)
@@ -54,7 +54,7 @@ class Player(arcade.Sprite):
         self.change_y = 0
 
         if arcade.key.UP in pressed_keys or arcade.key.W in pressed_keys:
-            self.forward(4 )
+            self.forward(10)
 
         if arcade.key.DOWN in pressed_keys or arcade.key.S in pressed_keys:
             self.reverse(2)

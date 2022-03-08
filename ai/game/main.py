@@ -54,7 +54,7 @@ class Player(arcade.Sprite):
         self.change_y = 0
 
         if arcade.key.UP in pressed_keys or arcade.key.W in pressed_keys:
-            self.forward(4)
+            self.forward(4 )
 
         if arcade.key.DOWN in pressed_keys or arcade.key.S in pressed_keys:
             self.reverse(2)
